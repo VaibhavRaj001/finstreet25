@@ -89,18 +89,32 @@
     
       
 
-        <!-- Navigation Bar -->
+       <!-- Navigation Bar -->
         <nav class="fixed top-0 left-0 w-full bg-black bg-opacity-75 py-3 z-50">
-            <ul class="flex justify-center gap-8 text-lg font-medium">
-                <li><a href="#about" class="hover:text-cyan-400">About</a></li>
-                <li><a href="#album" class="hover:text-cyan-400">Events</a></li>
-                <li><a href="#schedule" class="hover:text-cyan-400">Schedule</a></li>
-                <li><a href="#carousel" class="hover:text-cyan-400">Highlights</a></li>
-                <li><a href="#sponsor" class="hover:text-cyan-400">Sponsors</a></li>
-                <li><a href="#footer" class="hover:text-cyan-400">Contact</a></li>
-                
-            </ul>
-        </nav>  
+            <div class="container mx-auto flex justify-between items-center px-4">
+                <!-- Logo -->
+                <div class="text-white text-lg font-bold">Finstreet</div>
+
+                <!-- Hamburger Menu Button (for mobile) -->
+            <button id="menu-btn" class="text-white text-2xl lg:hidden focus:outline-none">
+                &#9776;
+            </button>
+
+                <!-- Navigation Links -->
+                <ul
+                    id="menu"
+                    class="hidden lg:flex flex-col lg:flex-row lg:gap-8 lg:items-center text-lg font-medium"
+                >
+                    <li><a href="#home" class="hover:text-cyan-400">Home</a></li>
+                    <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+                    <li><a href="#album" class="hover:text-cyan-400">Events</a></li>
+                    <li><a href="#schedule" class="hover:text-cyan-400">Schedule</a></li>
+                    <li><a href="#carousel" class="hover:text-cyan-400">Highlights</a></li>
+                    <li><a href="#sponsor" class="hover:text-cyan-400">Sponsors</a></li>
+                    <li><a href="#footer" class="hover:text-cyan-400">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
 
 
 
@@ -447,6 +461,24 @@
               });
           });
       });
+    </script>
+
+
+
+        <!-- JavaScript for Mobile Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+        menu.classList.toggle('flex-col');
+        menu.classList.toggle('absolute');
+        menu.classList.toggle('top-full');
+        menu.classList.toggle('w-full');
+        menu.classList.toggle('bg-black');
+        });
     </script>
           
 </body>

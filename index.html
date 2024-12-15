@@ -51,6 +51,7 @@
 
         }
     </style>
+      
 
 </head>
 
@@ -68,7 +69,7 @@
             <!-- Finstreet Logo and Text -->
             <div class="text-left flex items-center gap-3">
                 <a href="https://financeclubbitm.in/" target="_blank" rel="noopener noreferrer">
-                    <img src="./finance club white logo.png" alt="Finstreet Logo" class="w-24 cursor-pointer">
+                    <img src="./finance club white logo.png" alt="Finance CLub logo" class="w-24 cursor-pointer">
                 </a>
 
                 <h1 class="text-2xl">
@@ -125,18 +126,20 @@
 
                 <!-- Logo Section -->
                 <div class="flex items-center gap-4">
-                    <img src="./Finstreet-logo.png" alt="Finstreet Logo" class="w-12">
-                    <h1 class="text-4xl">
-                        <span class="text-yellow-400 fin-font">Fin</span>
-                        <span class="street-font">Street</span>
-                    </h1>
+                    <a href="#home" rel="noopener noreferrer">
+                        <img src="./Finstreet-logo.png" alt="Finstreet Logo" class="w-12">
+                    </a>
+                        <h1 class="text-4xl">
+                            <span class="text-yellow-400 fin-font">Fin</span>
+                            <span class="street-font">Street</span>
+                        </h1>
                 </div>
 
                 <!-- Hamburger Icon for Mobile -->
                 <div class="lg:hidden flex items-center">
                     <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
                         <span id="hamburger-icon">&#9776;</span>
-                        <span id="close-icon" class="hidden">&times;</span>
+                        <span id="close-icon" class="hidden ml-1">&times;</span>
                     </button>
                 </div>
 
@@ -250,30 +253,30 @@
                 <div class="flex transition-transform duration-300" id="carousel-content">
                     <!-- Highlight 1: Video -->
                     <div class="min-w-full flex justify-center items-center">
-                        <video class="w-1/2 h-auto object-cover rounded-lg" autoplay loop muted>
+                        <video class="w-1/2 sm:w-1/2 h-auto object-cover rounded-lg" autoplay loop muted>
                             <source src="./bgVideo.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <!-- Highlight 2: Image -->
                     <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi1.jpg" alt="Highlight 2" class="w-1/3 h-auto object-cover rounded-lg">
+                        <img src="./hi1.jpg" alt="Highlight 2" class="w-1/3 sm:w-1/3 h-auto object-cover rounded-lg">
                     </div>
                     <!-- Highlight 3: Image -->
                     <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi2.jpg" alt="Highlight 3" class="w-1/3 h-auto object-cover rounded-lg">
+                        <img src="./hi2.jpg" alt="Highlight 3" class="w-1/3 sm:w-1/3 h-auto object-cover rounded-lg">
                     </div>
                     <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi3.jpg" alt="Highlight 3" class="w-1/3 h-auto object-cover rounded-lg">
+                        <img src="./hi3.jpg" alt="Highlight 3" class="w-1/3 sm:w-1/3 h-auto object-cover rounded-lg">
                     </div>
                     <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi4.jpg" alt="Highlight 3" class="w-1/3 h-auto object-cover rounded-lg">
+                        <img src="./hi4.jpg" alt="Highlight 3" class="w-1/3 sm:w-1/3 h-auto object-cover rounded-lg">
                     </div>
                     <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi5.jpg" alt="Highlight 3" class="w-1/3 h-auto object-cover rounded-lg">
+                        <img src="./hi5.jpg" alt="Highlight 3" class="w-1/3 sm:w-1/3 h-auto object-cover rounded-lg">
                     </div>
                     <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi6.jpg" alt="Highlight 3" class="w-1/3 h-auto object-cover rounded-lg">
+                        <img src="./hi6.jpg" alt="Highlight 3" class="w-1/3 sm:w-1/3 h-auto object-cover rounded-lg">
                     </div>
                 </div>
                 <!-- Carousel Controls -->
@@ -468,23 +471,31 @@
 
 
 
-    <!-- Script for Typing Animation -->
+   <!-- Script for Typing Animation -->
     <script>
         const typingText = "Welcome to FINSTREET'25";
         let index = 0;
-        const speed = 100; // Typing speed in milliseconds
+        const speed = 100;
 
         function typeEffect() {
             if (index < typingText.length) {
                 document.getElementById("typing-text").innerHTML += typingText.charAt(index);
                 index++;
                 setTimeout(typeEffect, speed);
+            } else {
+               
+                setTimeout(() => {
+                    index = 0;
+                    document.getElementById("typing-text").innerHTML = ""; 
+                    typeEffect(); 
+                }, 1000); 
             }
         }
 
         // Start the typing effect when the page loads
         document.addEventListener("DOMContentLoaded", typeEffect);
     </script>
+
 
 
 

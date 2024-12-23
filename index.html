@@ -253,48 +253,123 @@
         </div>
 
 
-        <!-- Carousel Section -->
-        <section id="carousel" class="py-12 bg-transparent">
-            <h2 class="text-3xl mx-auto text-yellow-400 font-bold text-center mb-8 uppercase">Event Highlights</h2>
-            <div class="relative overflow-hidden">
-                <div class="flex transition-transform duration-300" id="carousel-content">
-                    <!-- Highlight 1: Video -->
-                    <div class="min-w-full flex justify-center items-center">
-                        <video class="w-3/4 sm:w-1/2 h-auto object-cover rounded-lg" autoplay loop muted>
-                            <source src="./bgVideo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <!-- Highlight 2: Image -->
-                    <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi1.jpg" alt="Highlight 2" class="w-3/4 sm:w-1/3 h-auto object-cover rounded-lg">
-                    </div>
-                    <!-- Highlight 3: Image -->
-                    <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi2.jpg" alt="Highlight 3" class="w-3/4 sm:w-1/3 h-auto object-cover rounded-lg">
-                    </div>
-                    <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi3.jpg" alt="Highlight 3" class="w-3/4 sm:w-1/3 h-auto object-cover rounded-lg">
-                    </div>
-                    <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi4.jpg" alt="Highlight 3" class="w-3/4 sm:w-1/3 h-auto object-cover rounded-lg">
-                    </div>
-                    <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi5.jpg" alt="Highlight 3" class="w-3/4 sm:w-1/3 h-auto object-cover rounded-lg">
-                    </div>
-                    <div class="min-w-full flex justify-center items-center">
-                        <img src="./hi6.jpg" alt="Highlight 3" class="w-3/4 sm:w-1/3 h-auto object-cover rounded-lg">
-                    </div>
+        <div id="carousel" class="max-w-6xl mx-auto px-5 mt-28 mb-16">
+            <div class="flex flex-col justify-center">
+
+                <div class="text-center">
+                    <h2 class="font-semibold text-4xl text-yellow-400">Event Highlights</h2>
                 </div>
-                <!-- Carousel Controls -->
-                <button
-                    class="absolute left-20 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 px-4 py-2 text-white"
-                    id="prev">&lt;</button>
-                <button
-                    class="absolute right-20 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 px-4 py-2 text-white"
-                    id="next">&gt;</button>
+
+        <div class="carousel">
+            <div class="carousel__body">
+              <div class="carousel__prev"><i class="far fa-angle-left"></i></div>
+              <div class="carousel__next"><i class="far fa-angle-right"></i></div>
+              <div class="carousel__slider">
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-fit">
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-cover ">
+                      <h1>2</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-cover">
+                      <h1>3</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-cover">
+                      <h1>4</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-fit">
+                      <h1>5</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-cover">
+                      <h1>6</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-cover">
+                      <h1>7</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-cover">
+                      <h1>8</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-cover">
+                      <h1>9</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+                <div class="carousel__slider__item">
+                  <div class="item__3d-frame">
+                    <div class="item__3d-frame__box item__3d-frame__box--front">
+                        <img src="hi1.jpg" class="object-cover">
+                      <h1>10</h1>
+                    </div>
+                    <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+                    <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+          </div>
+
+        
 
 
         <!-- Sponsors section  -->
@@ -309,28 +384,22 @@
                     </p>
                 </div>
 
-                <div class="flex flex-wrap items-center justify-center gap-5 mt-4 sm:justify-evenly">
-                    <!-- Sponsor 1 -->
-                    <div class="w-40 h-auto sm:w-48 sm:h-20 lg:w-64 cursor-pointer">
-                        <img src="./FinEzzy-Logohigh-1-1024x349.png" alt="Sponsor 1 Logo"
-                            class="object-contain w-full h-full transition-transform duration-300 ease-in-out hover:scale-105">
+                <section class="bg-transparent overflow-hidden">
+                    <div class="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 h-svh flex flex-col justify-center">
+                     <div class="flex flex-col sm:flex-row mx-auto">
+                      <!--- Starts component --> <a href="#_"> <img src="https://images.unsplash.com/photo-1530035415911-95194de4ebcc?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom" alt="#_"> </a><a href="#_"> <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?q=80&amp;w=2672&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " class="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom" alt="#_"> </a><a href="#_"> <img src="https://images.unsplash.com/photo-1586996292898-71f4036c4e07?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom" alt="#_"> </a><a href="#_"> <img src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?q=80&amp;w=2574&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom" alt="#_"> </a>
+                      <!--- Ends component -->
+                     </div> <!-- Starts links to tutorial -->
+                     <div class="pointer-events-none fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
+                      <div class="pointer-events-auto flex w-full max-w-md divide-x divide-neutral-200 rounded-lg bg-transparent shadow-lg ring-1 ring-black ring-opacity-5">
+                       <div class="flex">
+                        <div class="flex flex-col divide-y divide-neutral-200">
+                        </div>
+                       </div>
+                      </div>
+                     </div> <!-- Ends links to tutorial -->
                     </div>
-                    <!-- Sponsor 2 -->
-                    <div class="w-40 h-auto sm:w-48 sm:h-20 lg:w-64 cursor-pointer">
-                        <img src="./StockGro logo - Black Font - White Background (1).png" alt="Sponsor 2 Logo"
-                            class="object-contain w-full h-full transition-transform duration-300 ease-in-out hover:scale-110">
-                    </div>
-                    <!-- Sponsor 3 -->
-                    <div class="w-40 h-auto sm:w-48 sm:h-20 lg:w-64 cursor-pointer">
-                        <img src="./unstop.jpg" alt="Sponsor 3 Logo"
-                            class="object-contain w-full h-full transition-transform duration-300 ease-in-out hover:scale-110">
-                    </div>
-                    <!-- Sponsor 4 -->
-                    <div class="w-40 h-auto sm:w-48 sm:h-20 lg:w-64 cursor-pointer">
-                        <img src="./nutanCreation.jpg" alt="Sponsor 4 Logo"
-                            class="object-contain w-full h-full transition-transform duration-300 ease-in-out hover:scale-110">
-                    </div>
-                </div>
+                </section>
 
             </div>
         </div>

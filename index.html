@@ -141,12 +141,6 @@
             backface-visibility: hidden;
         }
 
-        .item__3d-frame__box--front {
-            position: relative;
-            width: 100%; /* Set to the desired frame width */
-            height: 100%; /* Set to the desired frame height */
-            overflow: hidden; /* Prevents image overflow */
-        }
         .carousel__body .carousel__slider__item .item__3d-frame__box--left {
             left: 0;
             border-left-width: 5px;
@@ -160,12 +154,31 @@
             transform-origin: 100%;
         }
 
+        .item__3d-frame__box--front {
+            position: relative;
+            width: 100%; /* Set to the desired frame width */
+            height: 100%; /* Set to the desired frame height */
+            overflow: hidden; /* Prevents image overflow */
+        }
+
+        .item__3d-frame__box--front img {
+            width: 100%; /* Make the image span the full width of the frame */
+            height: 100%; /* Make the image span the full height of the frame */
+            object-fit: cover; /* Ensures the image covers the frame fully */
+        }
+
+        .text-center {
+            margin-bottom: 60px; /* Adjust the value as needed */
+        }
+
+
+                     
     </style>
       
 
 </head>
 
-<body class="bg-black text-white scroll-smooth">
+<body class="text-white scroll-smooth">
 
     <div class="relative h-screen">
         <video class="background-video" autoplay loop muted>
@@ -174,6 +187,7 @@
 
 
 
+        <!-- Logo Bar -->
         <div id="home" class="flex items-center justify-between mt-24 px-8">
             <!-- Finstreet Logo and Text -->
             <div class="text-left flex items-center gap-3">
@@ -272,7 +286,7 @@
             </div>
         </nav>
 
-        
+
         <div id="about" class="relative bg-transparent overflow-hidden mt-40">
             <div class="max-w-7xl mx-auto">
                 <div class="relative z-10 pb-8 bg-transparent sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
@@ -316,54 +330,7 @@
             </div>
         </div>
 
-
-
-        <div class="flex justify-center items-start mb-15">
-            <section id="schedule" class="py-12 px-4 mt-30">
-                <h2 class="text-3xl font-bold text-center mb-32 uppercase text-yellow-400">Event Schedule</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 mx-auto">
-                    <!-- Card 1 -->
-                    <div
-                        class="bg-blue-800 bg-opacity-70 border border-yellow-500 rounded-lg text-center shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 p-4">
-                        <h3 class="text-lg font-semibold mt-4 text-white">Day 1</h3>
-                        <p class="mt-2 text-gray-300">Date: 17 January, 2025 </p>
-                        <button
-                            class="mt-4 px-6 py-2 bg-yellow-500 text-sm font-semibold rounded-lg hover:bg-yellow-400 transition-colors">
-                            Register
-                        </button>
-                    </div>
-
-                    <div
-                        class="bg-blue-800 bg-opacity-70 border border-yellow-500 rounded-lg text-center shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 p-4">
-                        <h3 class="text-lg font-semibold mt-4 text-white">Day 2</h3>
-                        <p class="mt-2 text-gray-300">18 January, 2025</p>
-                        <button
-                            class="mt-4 px-6 py-2 bg-yellow-500 text-sm font-semibold rounded-lg hover:bg-yellow-400 transition-colors">
-                            Register
-                        </button>
-                    </div>
-
-                    <div
-                        class="bg-blue-800 bg-opacity-70 border border-yellow-500 rounded-lg text-center shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 p-4">
-                        <h3 class="text-lg font-semibold mt-4 text-white">Day 3</h3>
-                        <p class="mt-2 text-gray-300">19 January, 2025</p>
-                        <button
-                            class="mt-4 px-6 py-2 bg-yellow-500 text-sm font-semibold rounded-lg hover:bg-yellow-400 transition-colors">
-                            Register
-                        </button>
-                    </div>
-                </div>
-                <div class="flex justify-center mt-8">
-                    <button
-                        class="register1 font-semibold bg-yellow-500 text-black py-3 px-6 rounded-lg hover:bg-yellow-400 transition">
-                        <a href="events.html">Register for Events</a>
-                    </button>
-                </div>
-            </section>
-        </div>
-
-
-        <div id="carousel" class="max-w-6xl mx-auto px-5 mt-28 mb-16">
+        <div id="carousel" class="max-w-6xl mx-auto px-5 mt-32 mb-24">
             <div class="flex flex-col justify-center">
 
                 <div class="text-center">
@@ -378,7 +345,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <h1>1</h1>
+                        <img src="hi1.jpg" class="object-fit">
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
@@ -387,7 +354,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                    
+                        <img src="hi2.jpg" class="object-cover ">
                       <h1>2</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -397,7 +364,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <img src="" class="object-cover">
+                        <img src="hi3.jpg" class="object-cover">
                       <h1>3</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -407,7 +374,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <img src="" class="object-cover">
+                        <img src="hi4.jpg" class="object-cover">
                       <h1>4</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -417,7 +384,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <img src="" class="object-fit">
+                        <img src="hi5.jpg" class="object-fit">
                       <h1>5</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -427,7 +394,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <img src="" class="object-cover">
+                        <img src="hi6.jpg" class="object-cover">
                       <h1>6</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -437,7 +404,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <img src="" class="object-cover">
+                        <img src="hi1.jpg" class="object-cover">
                       <h1>7</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -447,7 +414,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <img src="" class="object-cover">
+                        <img src="hi2.jpg" class="object-cover">
                       <h1>8</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -457,7 +424,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <img src="" class="object-cover">
+                        <img src="hi3.jpg" class="object-cover">
                       <h1>9</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -467,7 +434,7 @@
                 <div class="carousel__slider__item">
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
-                        <img src="" class="object-cover">
+                        <img src="hi4.jpg" class="object-cover">
                       <h1>10</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
@@ -482,43 +449,53 @@
         
 
 
-        <!-- Sponsors section  -->
-        <div id="sponsor" class="max-w-6xl mx-auto px-5 mt-28 mb-16">
+          <div id="sponsor" class="max-w-6xl mx-auto px-4 py-16">
             <div class="flex flex-col justify-center">
-
-                <div class="text-center">
+                <!-- Heading Section -->
+                <div class="text-center mb-12">
                     <h2 class="font-semibold text-4xl text-yellow-400">FINSTREET'25 Sponsors</h2>
-                    <p class="font-semibold mx-auto mt-2 text-[#e0f0a8]">
+                    <p class="font-semibold text-[#e0f0a8] mt-4 mx-auto max-w-3xl leading-relaxed">
                         Heartfelt thanks to our esteemed sponsors for their unwavering support and commitment, adding a
-                        touch of excellence to FINSTREET'25
+                        touch of excellence to FINSTREET'25.
                     </p>
                 </div>
-
-                <section class="bg-transparent overflow-hidden">
-                    <div class="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 h-svh flex flex-col justify-center">
-                     <div class="flex flex-col sm:flex-row mx-auto">
-                      <!--- Starts component --> <a href="#_"> <img src="https://images.unsplash.com/photo-1530035415911-95194de4ebcc?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom" alt="#_"> </a><a href="#_"> <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?q=80&amp;w=2672&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " class="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom" alt="#_"> </a><a href="#_"> <img src="https://images.unsplash.com/photo-1586996292898-71f4036c4e07?q=80&amp;w=2670&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom" alt="#_"> </a><a href="#_"> <img src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?q=80&amp;w=2574&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-full w-full object-cover hover:scale-150 transform origin-bottom" alt="#_"> </a>
-                      <!--- Ends component -->
-                     </div> <!-- Starts links to tutorial -->
-                     <div class="pointer-events-none fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
-                      <div class="pointer-events-auto flex w-full max-w-md divide-x divide-neutral-200 rounded-lg bg-transparent shadow-lg ring-1 ring-black ring-opacity-5">
-                       <div class="flex">
-                        <div class="flex flex-col divide-y divide-neutral-200">
-                        </div>
-                       </div>
-                      </div>
-                     </div> <!-- Ends links to tutorial -->
+        
+                <!-- Sponsor Logos Section -->
+                <section class="bg-transparent">
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+                        <!-- Sponsor 1 -->
+                        <a href="#_" class="flex justify-center">
+                            <img src="https://images.unsplash.com/photo-1530035415911-95194de4ebcc?q=80&w=2670&auto=format&fit=crop" 
+                                 class="rounded-xl rotate-6 hover:rotate-0 transform hover:-translate-y-3 transition duration-500 object-cover h-32 w-32 sm:h-40 sm:w-40" 
+                                 alt="Sponsor 1">
+                        </a>
+                        <!-- Sponsor 2 -->
+                        <a href="#_" class="flex justify-center">
+                            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?q=80&w=2672&auto=format&fit=crop" 
+                                 class="rounded-xl -rotate-12 hover:rotate-0 transform hover:-translate-y-3 transition duration-500 object-cover h-32 w-32 sm:h-40 sm:w-40" 
+                                 alt="Sponsor 2">
+                        </a>
+                        <!-- Sponsor 3 -->
+                        <a href="#_" class="flex justify-center">
+                            <img src="https://images.unsplash.com/photo-1586996292898-71f4036c4e07?q=80&w=2670&auto=format&fit=crop" 
+                                 class="rounded-xl rotate-6 hover:rotate-0 transform hover:-translate-y-3 transition duration-500 object-cover h-32 w-32 sm:h-40 sm:w-40" 
+                                 alt="Sponsor 3">
+                        </a>
+                        <!-- Sponsor 4 -->
+                        <a href="#_" class="flex justify-center">
+                            <img src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?q=80&w=2574&auto=format&fit=crop" 
+                                 class="rounded-xl -rotate-12 hover:rotate-0 transform hover:-translate-y-3 transition duration-500 object-cover h-32 w-32 sm:h-40 sm:w-40" 
+                                 alt="Sponsor 4">
+                        </a>
                     </div>
                 </section>
-
             </div>
         </div>
+        
 
-
-
+        </div>
         <!-- Footer -->
         <footer id="footer" class="bg-black text-white py-5 px-10 md:px-16 lg:px-32 z-10 mt-10">
-            <!-- Social Media Buttons -->
 
             <!-- Footer Links -->
             <section class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left z-10">
@@ -593,7 +570,7 @@
 
 
             <!-- Footer Bottom -->
-            <div class="bg-black mt-0.1 border-t border-gray-700 pt-4 text-center z-10">
+            <div class="bg-black mb-1 border-t border-gray-700 pt-4 text-center z-10">
                 <p>
                     © Copyright:
                     <a href="https://financeclubbitm.in/" class="hover:text-cyan-400">2025 Finstreet Annual Fest. All
@@ -601,7 +578,6 @@
                 </p>
             </div>
         </footer>
-    </div>
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -614,46 +590,9 @@
         });
     </script>
 
-    <script>
-        // JavaScript for Carousel
-        const carouselContent = document.getElementById("carousel-content");
-        const prevButton = document.getElementById("prev");
-        const nextButton = document.getElementById("next");
-        const slides = document.querySelectorAll("#carousel-content > div");
-        const slideCount = slides.length;
 
-        let currentIndex = 0;
-        const slideWidth = 100;
-        const autoSlideInterval = 5000; // Width percentage of each slide
 
-        // Function to move to a specific slide
-        function goToSlide(index) {
-            carouselContent.style.transition = "transform 0.8s ease-in-out"; // Smooth transition
-            carouselContent.style.transform = `translateX(-${index * slideWidth}%)`;
-            currentIndex = index;
-        }
 
-        // Event listeners for buttons
-        prevButton.addEventListener("click", () => {
-            const newIndex = (currentIndex - 1 + slideCount) % slideCount;
-            goToSlide(newIndex);
-        });
-
-        nextButton.addEventListener("click", () => {
-            const newIndex = (currentIndex + 1) % slideCount;
-            goToSlide(newIndex);
-        });
-
-        // Auto-rotate carousel
-        setInterval(() => {
-            const newIndex = (currentIndex + 1) % slideCount;
-            goToSlide(newIndex);
-        }, autoSlideInterval); // Change slide every 5 seconds
-
-        carouselContent.addEventListener("transitionend", () => {
-            // Example: seamless loop logic could go here for additional animations.
-        });
-    </script>
 
 
 
@@ -702,6 +641,13 @@
             closeIcon.classList.toggle('hidden');
         });
     </script>
+
+
+
+    <style>
+
+    </style>
+
 
     <script>
         (function() {
@@ -789,6 +735,7 @@
         
         })();
     </script>
+
 
 </body>
 

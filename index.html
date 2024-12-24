@@ -171,6 +171,85 @@
             margin-bottom: 60px; /* Adjust the value as needed */
         }
 
+        /* Default styles (desktop) already in place */
+
+        @media screen and (max-width: 1024px) {
+            .carousel__prev, .carousel__next {
+                font-size: 40px;
+                bottom: -10%;
+            }
+
+            .carousel__prev {
+                left: 30%;
+            }
+
+            .carousel__next {
+                right: 30%;
+            }
+
+            .carousel__body {
+                padding: 10px 0 30px 0;
+            }
+
+            .carousel__body .carousel__slider__item {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel__prev, .carousel__next {
+                font-size: 30px;
+                bottom: -8%;
+            }
+
+            .carousel__prev {
+                left: 25%;
+            }
+
+            .carousel__next {
+                right: 25%;
+            }
+
+            .carousel__body {
+                padding: 5px 0 20px 0;
+            }
+
+            .carousel__body .carousel__slider__item {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .carousel__prev, .carousel__next {
+                font-size: 20px;
+                bottom: -5%;
+            }
+
+            .carousel__prev {
+                left: 20%;
+            }
+
+            .carousel__next {
+                right: 20%;
+            }
+
+            .carousel__body .carousel__slider__item {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .carousel__body .carousel__slider__item .item__3d-frame {
+                height: 200px; /* Adjust for smaller screens */
+            }
+
+            .carousel__body .carousel__slider__item .item__3d-frame__box--front img {
+                object-fit: cover;
+            }
+        }
+
+
 
                      
     </style>
@@ -331,7 +410,6 @@
         </div>
 
 
-        
         <div class="flex justify-center items-start mb-15">
             <section id="schedule" class="py-12 px-4 mt-30">
                 <h2 class="text-3xl font-bold text-center mb-32 uppercase text-yellow-400">Event Schedule</h2>
@@ -690,11 +768,6 @@
 
 
 
-    <style>
-
-    </style>
-
-
     <script>
         (function() {
         "use strict";
@@ -718,18 +791,45 @@
         }
         
         function resize() {
-            width = Math.max(window.innerWidth * .25, 275),
-            height = window.innerHeight * .5,
+            const isMobile = window.innerWidth <= 480;
+            const isTablet = window.innerWidth <= 768;
+            const isDesktop = window.innerWidth > 768;
+
+            width = isMobile ? window.innerWidth * 0.85 : 
+                    isTablet ? window.innerWidth * 0.5 : 
+                    Math.max(window.innerWidth * 0.25, 275);
+
+            height = isMobile ? 200 : window.innerHeight * 0.5;
             totalWidth = width * items.length;
-        
+
             slider.style.width = totalWidth + "px";
-        
-            for(var i = 0; i < items.length; i++) {
+
+            for (var i = 0; i < items.length; i++) {
                 let item = items[i];
                 item.style.width = (width - (margin * 2)) + "px";
                 item.style.height = height + "px";
             }
         }
+
+
+
+        let startX = 0;
+        let endX = 0;
+
+        slider.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        slider.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            if (startX > endX + 50) {
+                next(); // Swipe left
+            } else if (startX < endX - 50) {
+                prev(); // Swipe right
+            }
+        });
+
+
         
         function move(index) {
         
@@ -775,6 +875,8 @@
             prevBtn.addEventListener('click', () => { prev(); });
             nextBtn.addEventListener('click', () => { next(); });    
         }
+
+        
         
         
         init();

@@ -241,72 +241,12 @@
             }
 
             .carousel__body .carousel__slider__item .item__3d-frame {
-                height: 120px;
-                width: 160px; /* Adjust for smaller screens */
+                height: 200px; /* Adjust for smaller screens */
             }
 
             .carousel__body .carousel__slider__item .item__3d-frame__box--front img {
                 object-fit: cover;
             }
-            
-                        /* Add this animation to the .carousel__slider */
-            @keyframes carousel-scroll {
-                0% {
-                    transform: translate3d(0, 0, 0);
-                }
-                100% {
-                    transform: translate3d(-100%, 0, 0); /* Moves by 100% of the carousel's width */
-                }
-            }
-
-            .carousel__body .carousel__slider {
-                position: relative;
-                display: flex; /* Change to flexbox for a smoother transition */
-                transition: transform 1s ease-in-out;
-                background: var(--crsl-bg);
-                animation: carousel-scroll 20s linear infinite; /* 20s duration, adjust as needed */
-            }
-
-            .carousel__slider__item {
-                /* Remove any left or right margin that may disrupt the flow */
-                margin: 0;
-            }
-
-            /* The other styles remain the same */
-
-
-                        /* Basic styling */
-            #sponsor {
-                font-family: 'Arial', sans-serif;
-            }
-
-            /* Basic Styling */
-            #slider {
-                scroll-snap-type: x mandatory;
-            }
-
-            .card {
-                scroll-snap-align: start;
-            }
-
-            /* Responsive Adjustments */
-            @media (max-width: 768px) {
-                #slider {
-                    gap: 16px; /* Adjust gap between cards */
-                }
-
-                .card {
-                    width: calc(50% - 16px); /* Two cards fit within the screen */
-                    margin: 0 8px;
-                }
-            }
-
-            @media (max-width: 480px) {
-                .card {
-                    width: calc(50% - 8px); /* Further reduce card width for smaller devices */
-                }
-            }
-
         }
 
 
@@ -539,7 +479,6 @@
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
                         <img src="hi2.jpg" class="object-cover ">
-                      
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
@@ -549,7 +488,6 @@
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
                         <img src="hi3.jpg" class="object-cover">
-                      
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
@@ -559,7 +497,7 @@
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
                         <img src="hi4.jpg" class="object-cover">
-                      
+                      <h1>4</h1>
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
@@ -569,7 +507,6 @@
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
                         <img src="hi5.jpg" class="object-fit">
-                      
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
@@ -579,7 +516,7 @@
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
                         <img src="hi6.jpg" class="object-cover">
-                     
+                      
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
@@ -589,7 +526,7 @@
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
                         <img src="hi1.jpg" class="object-cover">
-                     
+                      
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
@@ -619,7 +556,6 @@
                   <div class="item__3d-frame">
                     <div class="item__3d-frame__box item__3d-frame__box--front">
                         <img src="hi4.jpg" class="object-cover">
-                      
                     </div>
                     <div class="item__3d-frame__box item__3d-frame__box--left"></div>
                     <div class="item__3d-frame__box item__3d-frame__box--right">             </div>
@@ -630,10 +566,8 @@
           </div>
           </div>
 
-        
 
-
-        <div id="sponsor" class="max-w-6xl mx-auto px-4 py-16">
+                <div id="sponsor" class="max-w-6xl mx-auto px-4 py-16">
             <div class="flex flex-col justify-center">
                 <!-- Heading Section -->
                 <div class="text-center mb-12">
@@ -645,105 +579,61 @@
                 </div>
             </div>
 
+            <div class="p-1 flex flex-wrap items-center justify-center">
 
-            <!-- ✅ Grid Section - Starts Here 👇 -->
-            <section id="Projects"
-                class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
-
-                <div id="sponsor" class="max-w-6xl mx-auto px-4 py-16">
-                    <div class="flex flex-col justify-center">
-                        <!-- Heading Section -->
-                        <div class="text-center mb-12">
-                            <h2 class="font-semibold text-4xl text-yellow-400">FINSTREET'25 Sponsors</h2>
-                            <p class="font-semibold text-[#e0f0a8] mt-4 mx-auto max-w-3xl leading-relaxed">
-                                Heartfelt thanks to our esteemed sponsors for their unwavering support and commitment, adding a
-                                touch of excellence to FINSTREET'25.
-                            </p>
+                <div class="flex-shrink-0 m-6 relative overflow-hidden bg-orange-500 rounded-lg w-32 h-40 sm:w-64 sm:80 shadow-lg group">
+                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform" viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
+                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white" />
+                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                    </svg>
+                    <div class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                            style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
                         </div>
+                        <img class="relative w-16 h-auto object-cover" src="s2.png" alt="">
                     </div>
-                
-                    <!-- Slider Wrapper -->
-                    <div class="relative">
-                        <!-- Slider Container -->
-                        <div id="slider" class="flex transition-transform duration-500 ease-in-out overflow-hidden">
-                            <!-- Sponsor Cards -->
-                            <div class="w-72 h-64 flex-shrink-0 bg-white shadow-md rounded-xl mx-4">
-                                <a href="#">
-                                    <img src="s1.png" alt="Product"
-                                        class="h-32 w-32 object-fit border-4 border-black rounded-full mx-auto mt-4" />
-                                    <div class="px-4 py-3">
-                                        <p class="text-lg font-bold text-black truncate capitalize mt-3 flex justify-center">Sponsor
-                                            1</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="w-72 h-64 flex-shrink-0 bg-white shadow-md rounded-xl mx-4">
-                                <a href="#">
-                                    <img src="s1.png" alt="Product"
-                                        class="h-32 w-32 object-fit border-4 border-black rounded-full mx-auto mt-4" />
-                                    <div class="px-4 py-3">
-                                        <p class="text-lg font-bold text-black truncate capitalize mt-3 flex justify-center">Sponsor
-                                            2</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="w-72 h-64 flex-shrink-0 bg-white shadow-md rounded-xl mx-4">
-                                <a href="#">
-                                    <img src="s1.png" alt="Product"
-                                        class="h-32 w-32 object-fit border-4 border-black rounded-full mx-auto mt-4" />
-                                    <div class="px-4 py-3">
-                                        <p class="text-lg font-bold text-black truncate capitalize mt-3 flex justify-center">Sponsor
-                                            3</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="w-72 h-64 flex-shrink-0 bg-white shadow-md rounded-xl mx-4">
-                                <a href="#">
-                                    <img src="s1.png" alt="Product"
-                                        class="h-32 w-32 object-fit border-4 border-black rounded-full mx-auto mt-4" />
-                                    <div class="px-4 py-3">
-                                        <p class="text-lg font-bold text-black truncate capitalize mt-3 flex justify-center">Sponsor
-                                            4</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="w-72 h-64 flex-shrink-0 bg-white shadow-md rounded-xl mx-4">
-                                <a href="#">
-                                    <img src="s1.png" alt="Product"
-                                        class="h-32 w-32 object-fit border-4 border-black rounded-full mx-auto mt-4" />
-                                    <div class="px-4 py-3">
-                                        <p class="text-lg font-bold text-black truncate capitalize mt-3 flex justify-center">Sponsor
-                                            5</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="w-72 h-64 flex-shrink-0 bg-white shadow-md rounded-xl mx-4">
-                                <a href="#">
-                                    <img src="s1.png" alt="Product"
-                                        class="h-32 w-32 object-fit border-4 border-black rounded-full mx-auto mt-4" />
-                                    <div class="px-4 py-3">
-                                        <p class="text-lg font-bold text-black truncate capitalize mt-3 flex justify-center">Sponsor
-                                            6</p>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="flex justify-center relative text-white px-6 pb-6 mt-6">
+                            <span class="block font-semibold text-xl">Sponsor 1</span>
                         </div>
-                
-                        <!-- Navigation Buttons -->
-                        <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full">
-                            &#10094;
-                        </button>
-                        <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full">
-                            &#10095;
-                        </button>
-                    </div>
                 </div>
-                <!--   🛑 Product card 6 - Ends Here  -->
-
-            </section>
+            
+                <div class="flex-shrink-0 m-6 relative overflow-hidden bg-teal-500 rounded-lg w-32 h-40 sm:w-64 sm:80 shadow-lg group">
+                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform" viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
+                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white" />
+                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                    </svg>
+                    <div class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                            style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
+                        </div>
+                        <img class="relative w-50 h-auto object-cover" src="s1.png" alt="">
+                    </div>
+                        <div class="flex justify-center relative text-white px-6 pb-6 mt-6">
+                            <span class="block font-semibold text-xl">Sponsor 2</span>
+                        </div>
+                </div>
+            
+                <div class="flex-shrink-0 m-6 relative overflow-hidden bg-orange-500 rounded-lg w-32 h-40 sm:w-64 sm:80 shadow-lg group">
+                    <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform" viewBox="0 0 375 283" fill="none" style="opacity: 0.1;">
+                        <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white" />
+                        <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                    </svg>
+                    <div class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                            style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;">
+                        </div>
+                        <img class="relative w-16 h-auto object-cover" src="s2.png" alt="">
+                    </div>
+                        <div class="flex justify-center relative text-white px-6 pb-6 mt-6">
+                            <span class="block font-semibold text-xl">Sponsor 3</span>
+                        </div>
+                </div>
+            
+            </div>
         </div>
+        
 
-
+        </div>
         <!-- Footer -->
         <footer id="footer" class="bg-black text-white py-5 px-10 md:px-16 lg:px-32 z-10 mt-10">
 
@@ -844,40 +734,6 @@
 
 
 
-    <script>
-        const slider = document.getElementById('slider');
-        const next = document.getElementById('next');
-        const prev = document.getElementById('prev');
-
-        let currentIndex = 0;
-
-        function goToSlide(index) {
-            const slideWidth = slider.offsetWidth / 2; // Two cards visible
-            currentIndex = index;
-            if (currentIndex > slider.children.length - 1) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = slider.children.length - 1;
-            slider.scrollTo({ left: currentIndex * slideWidth, behavior: 'smooth' });
-        }
-
-        // Manual navigation
-        next.addEventListener('click', () => goToSlide(currentIndex + 1));
-        prev.addEventListener('click', () => goToSlide(currentIndex - 1));
-
-        // Auto-slider
-        let autoSlideInterval = setInterval(() => goToSlide(currentIndex + 1), 3000);
-
-        // Pause auto-slide on interaction
-        [next, prev, slider].forEach((element) => {
-            element.addEventListener('mouseover', () => clearInterval(autoSlideInterval));
-            element.addEventListener('mouseout', () => autoSlideInterval = setInterval(() => goToSlide(currentIndex + 1), 3000));
-        });
-
-        // Adjust slider width on window resize
-        window.addEventListener('resize', () => {
-            const slideWidth = slider.offsetWidth / 2;
-            slider.scrollTo({ left: currentIndex * slideWidth, behavior: 'smooth' });
-        });
-    </script>
 
 
    <!-- Script for Typing Animation -->
@@ -992,34 +848,25 @@
 
         
         function move(index) {
-            // Update the current index
+        
+            if(index < 1) index = items.length;
+            if(index > items.length) index = 1;
             currIndex = index;
-
-            // Ensure the index stays within the bounds of the carousel length
-            // We are not wrapping back, just scrolling continuously
-            if (currIndex >= items.length) {
-                currIndex = 0; // Go back to the first item if it's the last one (this can be omitted if you want to keep moving)
-            }
-
-            // Move each item based on the current index
-            for (var i = 0; i < items.length; i++) {
+        
+            for(var i = 0; i < items.length; i++) {
                 let item = items[i],
                     box = item.getElementsByClassName('item__3d-frame')[0];
-
-                // Adjust the transform based on the index
-                if (i == currIndex) {
+                if(i == (index - 1)) {
                     item.classList.add('carousel__slider__item--active');
-                    box.style.transform = "perspective(1200px)"; // Centered item
+                    box.style.transform = "perspective(1200px)"; 
                 } else {
                     item.classList.remove('carousel__slider__item--active');
-                    box.style.transform = "perspective(1200px) rotateY(" + (i < currIndex ? 40 : -40) + "deg)";
+                    box.style.transform = "perspective(1200px) rotateY(" + (i < (index - 1) ? 40 : -40) + "deg)";
                 }
             }
-
-            // Slide the entire slider to simulate continuous scrolling
-            slider.style.transform = "translate3d(" + ((currIndex * -width) + (width / 2) + window.innerWidth / 2) + "px, 0, 0)";
+        
+            slider.style.transform = "translate3d(" + ((index * -width) + (width / 2) + window.innerWidth / 2) + "px, 0, 0)";
         }
-
         
         function timer() {
             clearInterval(interval);    
@@ -1029,14 +876,12 @@
         }
         
         function prev() {
-            // Move to the previous slide
-            move(currIndex - 1);
+            move(--currIndex);
             timer();
         }
-
+        
         function next() {
-            // Move to the next slide
-            move(currIndex + 1);
+            move(++currIndex);    
             timer();
         }
         
